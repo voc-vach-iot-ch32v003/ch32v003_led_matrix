@@ -1,7 +1,7 @@
 {
   "name": "ch32v003_led_matrix",
-  "version": "1.0.0",
-  "description": "Thư viện điều khiển hệ thống LED Matrix 8x8 lớp đồ họa (Frame Buffer, Font 5x7, Bresenham Line, Rotation) cho vi điều khiển CH32V003.",
+  "version": "2.0.0",
+  "description": "Thư viện đồ họa cho LED Matrix 8x8 ghép nối tiếp qua MAX7219 trên CH32V003: Frame Buffer, điểm / đường thẳng / chữ font 5x7, xoay màn hình, cuộn chữ 4 hướng, nhiều màn hình độc lập.",
   "keywords": [
     "led-matrix",
     "graphics",
@@ -11,20 +11,33 @@
     "ch32v003",
     "ch32v003fun"
   ],
+  "homepage": "https://github.com/voc-vach-iot-ch32v003/ch32v003_led_matrix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/voc-vach-iot-ch32v003/ch32v003_led_matrix.git"
+  },
+  "license": "MIT",
   "authors": [
     {
       "name": "Vọc Vạch IoT",
+      "email": "vocvachiot@gmail.com",
       "maintainer": true
     }
   ],
   "frameworks": ["ch32v003fun"],
   "platforms": ["ch32v"],
-  "build": {
-    "flags": ["-I ."]
-  },
   "dependencies": [
-    "https://github.com/voc-vach-iot-ch32v003/ch32v003_gpio.git",
-    "https://github.com/voc-vach-iot-ch32v003/ch32v003_spi.git",
-    "https://github.com/voc-vach-iot-ch32v003/ch32v003_max7219.git"
+    {
+      "name": "ch32v003_gpio",
+      "version": "https://github.com/voc-vach-iot-ch32v003/ch32v003_gpio.git#v2.0.1"
+    },
+    {
+      "name": "ch32v003_spi",
+      "version": "https://github.com/voc-vach-iot-ch32v003/ch32v003_spi.git#v2.0.1"
+    },
+    {
+      "name": "ch32v003_max7219",
+      "version": "https://github.com/voc-vach-iot-ch32v003/ch32v003_max7219.git#v2.0.1"
+    }
   ]
 }
